@@ -1,0 +1,17 @@
+{
+  "name": "gymtrack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:ui": "pnpm --filter ui dev",
+    "start:api": "dotnet run --project ./apps/api",
+    "start:all": "concurrently \"pnpm start:api\" \"pnpm start:ui\""
+  },
+  "devDependencies": {
+    "concurrently": "8.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
