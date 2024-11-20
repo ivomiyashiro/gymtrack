@@ -31,3 +31,4 @@
 /Applications/Dev/gymtrack/apps/api/obj/Debug/net8.0/api.pdb
 /Applications/Dev/gymtrack/apps/api/obj/Debug/net8.0/api.genruntimeconfig.cache
 /Applications/Dev/gymtrack/apps/api/obj/Debug/net8.0/ref/api.dll
+/Applications/Dev/gymtrack/apps/api/obj/Debug/net8.0/api.sourcelink.json
