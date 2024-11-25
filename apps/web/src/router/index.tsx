@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import { WorkoutsPage } from "@/pages";
+import { WorkoutsPage } from "@/router/pages";
 
 const Router = () => {
   return (
