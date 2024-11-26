@@ -1,0 +1,14 @@
+{
+  "workouts": [
+    {
+      "id": 1,
+      "name": "PPL",
+      "description": "PUSH, PULL, LEGS"
+    },
+    {
+      "id": 2,
+      "name": "Full Body",
+      "description": "FULL BODY WORKOUT"
+    }
+  ]
+}

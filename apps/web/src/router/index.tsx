@@ -1,10 +1,12 @@
 import { Route, Routes } from "react-router";
 import { WorkoutsPage } from "@/router/pages";
+import { NewWorkout } from "@/router/pages";
 
 const Router = () => {
   return (
     <Routes>
-      <Route index element={<WorkoutsPage />} />
+      <Route path="/workouts" element={<WorkoutsPage />} />
+      <Route path="/workouts/new" element={<NewWorkout />} />
 
       {/* <Route element={<AuthLayout />}>
         <Route path="login" element={<Login />} />

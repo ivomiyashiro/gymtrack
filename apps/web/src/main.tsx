@@ -11,10 +11,10 @@ import "./index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <div className="p-6">
+      <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+        <main className="h-lvh p-6">
           <Router />
-        </div>
+        </main>
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
