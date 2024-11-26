@@ -1,12 +1,15 @@
 import { Route, Routes } from "react-router";
-import { WorkoutsPage } from "@/router/pages";
-import { NewWorkout } from "@/router/pages";
+
+import WorkoutsPage from "@/router/workouts/page";
+import NewWorkout from "@/router/workouts/new/page";
+import EditWorkout from "@/router/workouts/[id]/page";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/workouts" element={<WorkoutsPage />} />
       <Route path="/workouts/new" element={<NewWorkout />} />
+      <Route path="/workouts/:id/edit" element={<EditWorkout />} />
 
       {/* <Route element={<AuthLayout />}>
         <Route path="login" element={<Login />} />

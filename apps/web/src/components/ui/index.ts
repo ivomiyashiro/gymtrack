@@ -6,3 +6,4 @@ export * from "./typography-h1";
 export * from "./typography-h3";
 export * from "./typography-p";
 export * from "./workout-card";
+export * from "./workout-form";
