@@ -1,11 +1,9 @@
 import { useNavigate } from "react-router";
+
 import { Workout } from "@/types";
-import {
-  Button,
-  TypographyH1,
-  TypographyH3,
-  WorkoutCard,
-} from "@/components/ui";
+
+import { PageLayout } from "@/layouts";
+import { Button, TypographyH3, WorkoutCard } from "@/components/ui";
 
 import data from "@/data/workouts.json";
 
@@ -14,8 +12,7 @@ const WorkoutsPage = () => {
   const { workouts } = data;
 
   return (
-    <>
-      <TypographyH1>Workouts</TypographyH1>
+    <PageLayout title="Workouts" prevUrl="/">
       <TypographyH3 className="mt-6">My plan</TypographyH3>
       <div className="my-4 flex flex-col gap-8">
         <div className="flex flex-col gap-4">
@@ -31,7 +28,7 @@ const WorkoutsPage = () => {
           Create new workout
         </Button>
       </div>
-    </>
+    </PageLayout>
   );
 };
 
