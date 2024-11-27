@@ -24,7 +24,7 @@ const PageLayout = ({
           {title && <TypographyH1 className="text-3xl">{title}</TypographyH1>}
         </div>
       </div>
-      <div className="pt-6">{children}</div>
+      <div className="pt-11">{children}</div>
     </>
   );
 };

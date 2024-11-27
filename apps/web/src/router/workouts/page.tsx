@@ -13,7 +13,7 @@ const WorkoutsPage = () => {
 
   return (
     <PageLayout title="Workouts" prevUrl="/">
-      <TypographyH3 className="mt-6">My plan</TypographyH3>
+      <TypographyH3>My plan</TypographyH3>
       <div className="my-4 flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           {workouts.map((workout: Workout) => (
