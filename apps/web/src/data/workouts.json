@@ -1,14 +1,130 @@
 {
   "workouts": [
     {
-      "id": 1,
-      "name": "PPL",
-      "description": "PUSH, PULL, LEGS"
+      "workoutId": 1,
+      "name": "PUSH",
+      "daysPerWeek": 2,
+      "notes": "",
+      "restBetweenSets": 120,
+      "exercises": [
+        {
+          "excerciseId": 1,
+          "name": "Bench Press",
+          "sets": [
+            {
+              "setId": 1,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 2,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 3,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "excerciseId": 2,
+          "name": "Incline Bench Press",
+          "sets": [
+            {
+              "setId": 1,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 2,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 3,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": 2,
-      "name": "Full Body",
-      "description": "FULL BODY WORKOUT"
+      "workoutId": 2,
+      "name": "PULL",
+      "daysPerWeek": 2,
+      "notes": "",
+      "restBetweenSets": 120,
+      "exercises": [
+        {
+          "excerciseId": 1,
+          "name": "Lat Pull Down",
+          "sets": [
+            {
+              "setId": 1,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 2,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 3,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ]
+        },
+        {
+          "excerciseId": 2,
+          "name": "Seated Cable Row",
+          "sets": [
+            {
+              "setId": 1,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 2,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 3,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,30 +1,26 @@
 import { Route, Routes } from "react-router";
 
-import WorkoutsPage from "@/router/workouts/page";
-import NewWorkout from "@/router/workouts/new/page";
-import EditWorkout from "@/router/workouts/[id]/edit/page";
-import WorkoutPage from "@/router/workouts/[id]/page";
-import NewTraining from "./workouts/[id]/new-training/page";
+import RoutinesPage from "@/router/routines/page";
+import NewRoutine from "@/router/routines/new/page";
+import RoutinePage from "@/router/routines/[routineId]/page";
+import EditWorkout from "@/router/routines/[routineId]/edit/page";
+import NewWorkout from "@/router/routines/[routineId]/new-routine/page";
 
 const Router = () => {
   return (
     <Routes>
-      <Route path="/workouts" element={<WorkoutsPage />} />
-      <Route path="/workouts/new" element={<NewWorkout />} />
-      <Route path="/workouts/:id" element={<WorkoutPage />} />
-      <Route path="/workouts/:id/edit" element={<EditWorkout />} />
-      <Route path="/workouts/:id/new-training" element={<NewTraining />} />
-
-      {/* <Route element={<AuthLayout />}>
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+      <Route path="routines">
+        <Route index element={<RoutinesPage />} />
+        <Route path="new" element={<NewRoutine />} />
+        <Route path=":routineId">
+          <Route index element={<RoutinePage />} />
+          <Route path="edit" element={<EditWorkout />} />
+          <Route path="workouts">
+            <Route index element={<RoutinePage />} />
+            <Route path="new" element={<NewWorkout />} />
+          </Route>
+        </Route>
       </Route>
-
-      <Route path="concerts">
-        <Route index element={<ConcertsHome />} />
-        <Route path=":city" element={<City />} />
-        <Route path="trending" element={<Trending />} />
-      </Route> */}
     </Routes>
   );
 };

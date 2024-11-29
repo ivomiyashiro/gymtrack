@@ -1,16 +1,23 @@
 import { useNavigate } from "react-router";
-import { DumbbellIcon } from "lucide-react";
 
 import { Workout } from "@/types";
 
 import { Card, TypographyH3 } from "@/components";
 
-export const WorkoutCard = ({ workout }: { workout: Workout }) => {
+export const WorkoutCard = ({
+  routineId,
+  workout,
+}: {
+  routineId: number;
+  workout: Workout;
+}) => {
   const navigate = useNavigate();
 
-  const handleClick = () => navigate(`/workouts/${workout.id}`);
+  const handleClick = () =>
+    navigate(`/routines/${routineId}/workouts/${workout.workoutId}`);
 
-  const handleEdit = () => navigate(`/workouts/${workout.id}/edit`);
+  const handleEdit = () =>
+    navigate(`/routines/${routineId}/${workout.workoutId}/edit`);
 
   const handleDelete = () => alert("Delete");
 
@@ -23,7 +30,7 @@ export const WorkoutCard = ({ workout }: { workout: Workout }) => {
       onDelete={handleDelete}
     >
       <TypographyH3>{workout.name}</TypographyH3>
-      <DumbbellIcon className="text-primary" size={52} />
+      hola
     </Card>
   );
 };

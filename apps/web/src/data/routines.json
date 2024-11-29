@@ -1,0 +1,14 @@
+{
+  "routines": [
+    {
+      "routineId": 1,
+      "name": "PPL",
+      "description": "PUSH, PULL, LEGS"
+    },
+    {
+      "routineId": 2,
+      "name": "Full Body",
+      "description": "FULL BODY WORKOUT"
+    }
+  ]
+}

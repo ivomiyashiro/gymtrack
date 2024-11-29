@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router";
 import { TypographyH3, WorkoutForm } from "@/components";
 
-const EditWorkout = () => {
+const EditRoutine = () => {
   const navigate = useNavigate();
 
-  const handleCancel = () => navigate("/workouts");
+  const handleCancel = () => navigate("/routines");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    navigate("/workouts");
+    navigate("/routines");
   };
 
   return (
@@ -18,4 +18,5 @@ const EditWorkout = () => {
     </div>
   );
 };
-export default EditWorkout;
+
+export default EditRoutine;
