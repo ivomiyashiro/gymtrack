@@ -1,5 +1,6 @@
 export * from "./button";
 export * from "./card";
+export * from "./form";
 export * from "./input";
 export * from "./label";
 export * from "./textarea";
@@ -7,4 +8,4 @@ export * from "./typography-h1";
 export * from "./typography-h3";
 export * from "./typography-p";
 export * from "./workout-card";
-export * from "./workout-form";
+export * from "./checkbox";
