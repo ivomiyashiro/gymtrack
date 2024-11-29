@@ -1,5 +1,5 @@
-import { Button, Input, Label, Textarea } from "@/components/ui";
 import { Workout } from "@/types";
+import { Input, Label, Textarea, Form } from "@/components";
 
 export const WorkoutForm = ({
   workout,
@@ -11,7 +11,7 @@ export const WorkoutForm = ({
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }) => {
   return (
-    <form className="my-6 flex flex-col gap-4" onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit} onCancel={onCancel}>
       <div className="flex flex-col gap-2">
         <Label>Name</Label>
         <Input
@@ -24,20 +24,6 @@ export const WorkoutForm = ({
         <Label>Description</Label>
         <Textarea defaultValue={workout?.description} className="h-28" />
       </div>
-      <div className="flex gap-2">
-        <Button
-          type="button"
-          size="sm"
-          variant="secondary"
-          className="w-full"
-          onClick={onCancel}
-        >
-          Cancel
-        </Button>
-        <Button type="submit" size="sm" variant="default" className="w-full">
-          Save
-        </Button>
-      </div>
-    </form>
+    </Form>
   );
 };

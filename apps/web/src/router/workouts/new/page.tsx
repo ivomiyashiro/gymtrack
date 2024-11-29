@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { WorkoutForm, TypographyH3 } from "@/components/ui";
+import { WorkoutForm, TypographyH3 } from "@/components";
 
 const NewWorkout = () => {
   const navigate = useNavigate();

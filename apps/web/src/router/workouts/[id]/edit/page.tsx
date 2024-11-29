@@ -1,13 +1,8 @@
-import { TypographyH3, WorkoutForm } from "@/components/ui";
-import { useNavigate, useParams, useSearchParams } from "react-router";
+import { useNavigate } from "react-router";
+import { TypographyH3, WorkoutForm } from "@/components";
 
 const EditWorkout = () => {
   const navigate = useNavigate();
-  const { id } = useParams();
-  const [searchParams] = useSearchParams();
-
-  const name = searchParams.get("name") ?? "";
-  const description = searchParams.get("description") ?? "";
 
   const handleCancel = () => navigate("/workouts");
 
@@ -19,11 +14,7 @@ const EditWorkout = () => {
   return (
     <div className="h-full content-center">
       <TypographyH3>Edit workout</TypographyH3>
-      <WorkoutForm
-        workout={{ id: Number(id), name, description }}
-        onCancel={handleCancel}
-        onSubmit={handleSubmit}
-      />
+      <WorkoutForm onCancel={handleCancel} onSubmit={handleSubmit} />
     </div>
   );
 };
