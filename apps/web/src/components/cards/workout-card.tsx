@@ -18,7 +18,7 @@ export const WorkoutCard = ({
     navigate(`/routines/${routineId}/workouts/${workout.workoutId}`);
 
   const handleEdit = () =>
-    navigate(`/routines/${routineId}/${workout.workoutId}/edit`);
+    navigate(`/routines/${routineId}/workouts/${workout.workoutId}/edit`);
 
   const handleDelete = () => alert("Delete");
 

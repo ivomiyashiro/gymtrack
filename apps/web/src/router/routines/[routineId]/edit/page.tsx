@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import { TypographyH3, WorkoutForm } from "@/components";
+import { RoutineForm, TypographyH3 } from "@/components";
 
 const EditRoutine = () => {
   const navigate = useNavigate();
@@ -13,8 +13,8 @@ const EditRoutine = () => {
 
   return (
     <div className="h-full content-center">
-      <TypographyH3>Edit workout</TypographyH3>
-      <WorkoutForm onCancel={handleCancel} onSubmit={handleSubmit} />
+      <TypographyH3>Edit routine</TypographyH3>
+      <RoutineForm onCancel={handleCancel} onSubmit={handleSubmit} />
     </div>
   );
 };
