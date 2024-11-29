@@ -8,7 +8,7 @@ import { Card, TypographyH3 } from "@/components";
 export const RoutineCard = ({ routine }: { routine: Routine }) => {
   const navigate = useNavigate();
 
-  const handleClick = () => navigate(`/routines/${routine.routineId}`);
+  const handleClick = () => navigate(`/routines/${routine.routineId}/workouts`);
 
   const handleEdit = () => navigate(`/routines/${routine.routineId}/edit`);
 

@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router";
 
 import RoutinesPage from "@/router/routines/page";
 import NewRoutine from "@/router/routines/new/page";
-import RoutinePage from "@/router/routines/[routineId]/page";
+import WorkoutsPage from "@/router/routines/[routineId]/workouts/page";
 import EditWorkout from "@/router/routines/[routineId]/edit/page";
-import NewWorkout from "@/router/routines/[routineId]/new-routine/page";
+import NewWorkout from "@/router/routines/[routineId]/workouts/new/page";
 
 const Router = () => {
   return (
@@ -13,10 +13,9 @@ const Router = () => {
         <Route index element={<RoutinesPage />} />
         <Route path="new" element={<NewRoutine />} />
         <Route path=":routineId">
-          <Route index element={<RoutinePage />} />
           <Route path="edit" element={<EditWorkout />} />
           <Route path="workouts">
-            <Route index element={<RoutinePage />} />
+            <Route index element={<WorkoutsPage />} />
             <Route path="new" element={<NewWorkout />} />
           </Route>
         </Route>

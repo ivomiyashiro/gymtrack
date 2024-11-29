@@ -8,16 +8,16 @@ import { WorkoutCard, Button, TypographyH3, TypographyP } from "@/components";
 
 import data from "@/data/workouts.json";
 
-const RoutinePage = () => {
+const WorkoutsPage = () => {
   const navigate = useNavigate();
   const { routineId } = useParams();
 
-  const handleClick = () => navigate(`/routines/${routineId}/new-training`);
+  const handleClick = () => navigate(`/routines/${routineId}/workouts/new`);
 
   return (
     <PageLayout title="Workout Page" prevUrl="/routines">
       <div className="flex justify-between">
-        <TypographyH3>Training days</TypographyH3>
+        <TypographyH3>Workout split</TypographyH3>
         <Button
           variant="link"
           size="sm"
@@ -43,17 +43,17 @@ const RoutinePage = () => {
         <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
           <CalendarDaysIcon className="size-16 text-secondary-foreground" />
           <div className="my-6 text-center">
-            <TypographyH3 className="mb-1">Training days</TypographyH3>
+            <TypographyH3 className="mb-1">Workout split</TypographyH3>
             <TypographyP className="text-secondary-foreground">
               Create your workouts separated by days of the week and/or by
               muscle groups
             </TypographyP>
           </div>
-          <Button onClick={handleClick}>Create training days</Button>
+          <Button onClick={handleClick}>Create workout split</Button>
         </div>
       )}
     </PageLayout>
   );
 };
 
-export default RoutinePage;
+export default WorkoutsPage;

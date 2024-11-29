@@ -2,7 +2,7 @@
   "workouts": [
     {
       "workoutId": 1,
-      "name": "PUSH",
+      "name": "Push",
       "daysPerWeek": 2,
       "notes": "",
       "restBetweenSets": 120,
@@ -65,7 +65,7 @@
     },
     {
       "workoutId": 2,
-      "name": "PULL",
+      "name": "Pull",
       "daysPerWeek": 2,
       "notes": "",
       "restBetweenSets": 120,
@@ -100,6 +100,42 @@
         {
           "excerciseId": 2,
           "name": "Seated Cable Row",
+          "sets": [
+            {
+              "setId": 1,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 2,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            },
+            {
+              "setId": 3,
+              "reps": {
+                "min": 8,
+                "max": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workoutId": 3,
+      "name": "Legs",
+      "daysPerWeek": 1,
+      "notes": "",
+      "restBetweenSets": 120,
+      "exercises": [
+        {
+          "excerciseId": 1,
+          "name": "Squat",
           "sets": [
             {
               "setId": 1,

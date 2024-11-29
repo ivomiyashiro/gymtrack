@@ -26,7 +26,7 @@ const RoutinesPage = () => {
         <Button
           variant="secondary"
           className="w-full"
-          onClick={() => navigate("/workouts/new")}
+          onClick={() => navigate("/routines/new")}
         >
           Create new workout
         </Button>

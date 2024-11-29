@@ -2,7 +2,8 @@ import { useNavigate } from "react-router";
 
 import { Workout } from "@/types";
 
-import { Card, TypographyH3 } from "@/components";
+import { Card, TypographyH3, TypographyP } from "@/components";
+import { BicepsFlexedIcon } from "lucide-react";
 
 export const WorkoutCard = ({
   routineId,
@@ -29,8 +30,14 @@ export const WorkoutCard = ({
       onEdit={handleEdit}
       onDelete={handleDelete}
     >
-      <TypographyH3>{workout.name}</TypographyH3>
-      hola
+      <div>
+        <TypographyH3>{workout.name}</TypographyH3>
+        <TypographyP className="text-muted-foreground">
+          {workout.exercises.length} excersises · {workout.daysPerWeek} days a
+          week
+        </TypographyP>
+      </div>
+      <BicepsFlexedIcon className="text-primary" size={52} />
     </Card>
   );
 };

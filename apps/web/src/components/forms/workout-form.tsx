@@ -1,7 +1,14 @@
 import { Workout } from "@/types";
-import { Form, Input, Label, Checkbox } from "@/components";
-
-const DIAS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+import {
+  Form,
+  Input,
+  Label,
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectItem,
+  SelectContent,
+} from "@/components";
 
 export const WorkoutForm = ({
   workout,
@@ -22,21 +29,20 @@ export const WorkoutForm = ({
           placeholder="Ex: Push day"
         />
       </div>
-      <div className="flex flex-col gap-6">
-        <Label>Training day(s)</Label>
-        <div className="flex justify-between">
-          {DIAS.map((dia) => (
-            <div
-              key={dia}
-              className="flex flex-col items-center justify-center gap-2"
-            >
-              <Label htmlFor={dia} className="text-xs">
-                {dia}
-              </Label>
-              <Checkbox id={dia} />
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col gap-2">
+        <Label>Days per week</Label>
+        <Select defaultValue="1">
+          <SelectTrigger>
+            <SelectValue placeholder="" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="1">1</SelectItem>
+            <SelectItem value="2">2</SelectItem>
+            <SelectItem value="3">3</SelectItem>
+            <SelectItem value="4">4</SelectItem>
+            <SelectItem value="5">5</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
     </Form>
   );
