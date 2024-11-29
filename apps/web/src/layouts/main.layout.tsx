@@ -1,5 +1,5 @@
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
-  return <main className="h-lvh p-6">{children}</main>;
+  return <main className="h-lvh px-6">{children}</main>;
 };
 
 export default MainLayout;

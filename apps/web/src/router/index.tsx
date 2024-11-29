@@ -4,6 +4,7 @@ import WorkoutsPage from "@/router/workouts/page";
 import NewWorkout from "@/router/workouts/new/page";
 import EditWorkout from "@/router/workouts/[id]/edit/page";
 import WorkoutPage from "@/router/workouts/[id]/page";
+import NewTraining from "./workouts/[id]/new-training/page";
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/workouts/new" element={<NewWorkout />} />
       <Route path="/workouts/:id" element={<WorkoutPage />} />
       <Route path="/workouts/:id/edit" element={<EditWorkout />} />
+      <Route path="/workouts/:id/new-training" element={<NewTraining />} />
 
       {/* <Route element={<AuthLayout />}>
         <Route path="login" element={<Login />} />
