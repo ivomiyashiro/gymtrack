@@ -3,17 +3,14 @@ import { DumbbellIcon } from "lucide-react";
 
 import { Workout } from "@/types";
 
-import { Card, TypographyH3 } from "@/components/ui";
+import { Card, TypographyH3 } from "@/components";
 
 export const WorkoutCard = ({ workout }: { workout: Workout }) => {
   const navigate = useNavigate();
 
   const handleClick = () => navigate(`/workouts/${workout.id}`);
 
-  const handleEdit = () =>
-    navigate(
-      `/workouts/${workout.id}/edit?name=${workout.name}&description=${workout.description}`,
-    );
+  const handleEdit = () => navigate(`/workouts/${workout.id}/edit`);
 
   const handleDelete = () => alert("Delete");
 
