@@ -4,6 +4,7 @@ export * from "./checkbox";
 export * from "./form";
 export * from "./input";
 export * from "./label";
+export * from "./select";
 export * from "./textarea";
 export * from "./typography-h1";
 export * from "./typography-h3";
