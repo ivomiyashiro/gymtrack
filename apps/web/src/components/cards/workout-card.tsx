@@ -33,8 +33,7 @@ export const WorkoutCard = ({
       <div>
         <TypographyH3>{workout.name}</TypographyH3>
         <TypographyP className="text-muted-foreground">
-          {workout.exercises.length} excersises · {workout.daysPerWeek} days a
-          week
+          {workout.exercises.length} excersises
         </TypographyP>
       </div>
       <BicepsFlexedIcon className="text-primary" size={52} />

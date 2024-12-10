@@ -21,7 +21,7 @@ const Router = () => {
           <Route path="workouts">
             <Route index element={<WorkoutsPage />} />
             <Route path="new" element={<NewWorkout />} />
-            <Route path=":routineId">
+            <Route path=":workoutId">
               <Route index element={<WorkoutPage />} />
               <Route path="edit" element={<EditWorkout />} />
             </Route>

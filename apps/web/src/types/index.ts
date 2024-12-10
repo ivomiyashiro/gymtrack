@@ -1,26 +1,22 @@
 export type Set = {
-  setId: string;
-  reps: {
-    min: number;
-    max: number;
-  };
+  setId: number;
   rir: number;
   weight: number;
 };
 
-export type Exercise = {
-  exerciseId: string;
+export type WorkoutExcercise = {
+  workoutExcerciseId: number;
   name: string;
-  sets: Set[];
-  restBetweenSets: number;
-  notes: string;
+  personalRecord: {
+    weight: number;
+    reps: number;
+  };
 };
 
 export type Workout = {
   workoutId: string;
   name: string;
-  daysPerWeek: number;
-  exercises: Exercise[];
+  exercises: WorkoutExcercise[];
 };
 
 export type Routine = {

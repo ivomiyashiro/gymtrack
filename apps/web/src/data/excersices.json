@@ -1,0 +1,18 @@
+{
+  "exercises": [
+    {
+      "excerciseId": 1,
+      "name": "Bench Press",
+      "sets": [
+        {
+          "setId": 1,
+          "reps": {
+            "min": 8,
+            "max": 10
+          }
+        }
+      ],
+      "restBetweenSets": 120
+    }
+  ]
+}

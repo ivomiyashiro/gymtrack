@@ -3,162 +3,64 @@
     {
       "workoutId": 1,
       "name": "Push",
-      "daysPerWeek": 2,
       "notes": "",
       "restBetweenSets": 120,
       "exercises": [
         {
-          "excerciseId": 1,
+          "workoutExcerciseId": 1,
           "name": "Bench Press",
-          "sets": [
-            {
-              "setId": 1,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 2,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 3,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            }
-          ]
+          "personalRecord": {
+            "reps": 10,
+            "weight": 100
+          }
         },
         {
-          "excerciseId": 2,
+          "workoutExcerciseId": 2,
           "name": "Incline Bench Press",
-          "sets": [
-            {
-              "setId": 1,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 2,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 3,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            }
-          ]
+          "personalRecord": {
+            "reps": 10,
+            "weight": 100
+          }
         }
       ]
     },
     {
       "workoutId": 2,
       "name": "Pull",
-      "daysPerWeek": 2,
       "notes": "",
       "restBetweenSets": 120,
       "exercises": [
         {
-          "excerciseId": 1,
+          "workoutExcerciseId": 1,
           "name": "Lat Pull Down",
-          "sets": [
-            {
-              "setId": 1,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 2,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 3,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            }
-          ]
+          "personalRecord": {
+            "reps": 10,
+            "weight": 100
+          }
         },
         {
-          "excerciseId": 2,
+          "workoutExcerciseId": 2,
           "name": "Seated Cable Row",
-          "sets": [
-            {
-              "setId": 1,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 2,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 3,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            }
-          ]
+          "personalRecord": {
+            "reps": 10,
+            "weight": 100
+          }
         }
       ]
     },
     {
       "workoutId": 3,
       "name": "Legs",
-      "daysPerWeek": 1,
       "notes": "",
       "restBetweenSets": 120,
       "exercises": [
         {
-          "excerciseId": 1,
+          "workoutExcerciseId": 1,
           "name": "Squat",
-          "sets": [
-            {
-              "setId": 1,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 2,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            },
-            {
-              "setId": 3,
-              "reps": {
-                "min": 8,
-                "max": 10
-              }
-            }
-          ]
+          "personalRecord": {
+            "reps": 10,
+            "weight": 100
+          }
         }
       ]
     }
