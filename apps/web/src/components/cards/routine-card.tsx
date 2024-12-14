@@ -16,6 +16,7 @@ export const RoutineCard = ({ routine }: { routine: Routine }) => {
 
   return (
     <Card
+      className="p-4"
       allowDeleting={true}
       allowEditing={true}
       onClick={handleClick}

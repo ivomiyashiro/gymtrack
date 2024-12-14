@@ -20,7 +20,12 @@ export const ExcerciseCard = ({
   const handleDelete = () => alert("Delete");
 
   return (
-    <Card allowDeleting={true} onClick={handleClick} onDelete={handleDelete}>
+    <Card
+      className="p-4"
+      allowDeleting={true}
+      onClick={handleClick}
+      onDelete={handleDelete}
+    >
       <div>
         <TypographyH3>{excercise.name}</TypographyH3>
         <TypographyP className="text-muted-foreground">

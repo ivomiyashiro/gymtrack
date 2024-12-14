@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { PencilIcon, Trash2Icon } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 export const Card = ({
   allowDeleting,
   allowEditing,
   children,
+  className,
   onClick,
   onEdit,
   onDelete,
@@ -43,15 +46,17 @@ export const Card = ({
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg bg-secondary p-4"
+      className="relative overflow-hidden rounded-lg bg-secondary"
       onTouchMove={handleTouchMove}
       onTouchStart={handleTouchStart}
       {...props}
     >
       <div
-        className={`flex items-center justify-between ${
-          isSwiped ? "-translate-x-[calc(100%-52px)]" : "translate-x-0"
-        }`}
+        className={cn(
+          "flex items-center justify-between",
+          isSwiped ? "-translate-x-[calc(100%-52px)]" : "translate-x-0",
+          className,
+        )}
         onClick={onClick}
       >
         {children}

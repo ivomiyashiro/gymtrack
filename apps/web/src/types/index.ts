@@ -1,5 +1,6 @@
 export type Set = {
   setId: number;
+  reps: number;
   rir: number;
   weight: number;
 };

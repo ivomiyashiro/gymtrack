@@ -24,6 +24,7 @@ export const WorkoutCard = ({
 
   return (
     <Card
+      className="p-4"
       allowDeleting={true}
       allowEditing={true}
       onClick={handleClick}
