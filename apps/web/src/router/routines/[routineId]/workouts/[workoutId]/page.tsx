@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useParams } from "react-router";
 import { DumbbellIcon, PlusIcon } from "lucide-react";
 
 import type { WorkoutExcercise } from "@/types";
@@ -13,13 +12,12 @@ import data from "@/data/workouts.json";
 const excercises: WorkoutExcercise[] = data.workouts[0].exercises;
 
 const WorkoutPage = () => {
-  const { routineId } = useParams();
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   const handleClick = () => setPopupOpen(true);
 
   return (
-    <PageLayout title="Workout" prevUrl={`/routines/${routineId}/workouts`}>
+    <PageLayout title="Workout">
       <div className="flex justify-between">
         <TypographyH3>Excercises</TypographyH3>
         <Button

@@ -12,7 +12,7 @@ const RoutinesPage = () => {
   const { routines } = data;
 
   return (
-    <PageLayout title="Routines">
+    <PageLayout title="Routines" showPrevButton={false}>
       <TypographyH3>My collection</TypographyH3>
       <div className="my-4 flex flex-col gap-8">
         <div className="flex flex-col gap-4">

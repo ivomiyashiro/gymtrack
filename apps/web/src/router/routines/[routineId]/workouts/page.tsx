@@ -15,7 +15,7 @@ const WorkoutsPage = () => {
   const handleClick = () => navigate(`/routines/${routineId}/workouts/new`);
 
   return (
-    <PageLayout title="Workouts" prevUrl="/routines">
+    <PageLayout title="Workouts">
       <div className="flex justify-between">
         <TypographyH3>Workout split</TypographyH3>
         <Button

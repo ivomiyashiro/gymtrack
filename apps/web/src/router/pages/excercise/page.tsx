@@ -1,19 +1,11 @@
-import { useParams } from "react-router";
-
 import { PageLayout } from "@/layouts";
 
 import { AnalyticsSetsCard, SetsCard } from "@/components";
 import { LoadSetDrawer } from "./load-set-drawer";
 
 const ExcercisePage = () => {
-  const { routineId, workoutId } = useParams();
-
   return (
-    <PageLayout
-      title="Excercise"
-      prevUrl={`/routines/${routineId}/workouts/${workoutId}`}
-      className="flex flex-col gap-10"
-    >
+    <PageLayout title="Excercise" className="flex flex-col gap-10">
       <AnalyticsSetsCard />
       <SetsCard
         createdAt={new Date()}
