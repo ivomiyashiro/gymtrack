@@ -54,7 +54,7 @@ export const Card = ({
       <div
         className={cn(
           "flex items-center justify-between",
-          isSwiped ? "-translate-x-[calc(100%-52px)]" : "translate-x-0",
+          isSwiped ? "-translate-x-[calc(100%-82px)]" : "translate-x-0",
           className,
         )}
         onClick={onClick}
