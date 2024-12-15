@@ -27,7 +27,7 @@ export const LoadSetDrawer = () => {
   };
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
-  const [isNumericKeyboardVisible, setNumericKeyboardVisible] = useState(false);
+  const [isNumericKeyboardVisible, setNumericKeyboardVisible] = useState(true);
   const [focusInput, setFocusInput] =
     useState<InputSetNameType>(DEFAULT_FOCUSED);
   const [setValue, setSetValue] = useState<SetValuesType>(DEFAULT_SET_VALUES);
@@ -38,7 +38,6 @@ export const LoadSetDrawer = () => {
 
   const handleClose = () => {
     setNumericKeyboardVisible(false);
-    setFocusInput("reps");
   };
 
   const handleFocusNext = () => {
@@ -52,8 +51,6 @@ export const LoadSetDrawer = () => {
   };
 
   const handleSave = () => {
-    setNumericKeyboardVisible(false);
-    setFocusInput(DEFAULT_FOCUSED);
     setSetValue(DEFAULT_SET_VALUES);
     closeButtonRef.current?.click();
   };
