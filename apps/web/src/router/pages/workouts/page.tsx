@@ -35,7 +35,7 @@ const WorkoutPage = () => {
         <WorkoutDrawer ref={openDrawerButtonRef} workout={selectedWorkout} />
       </div>
       {excercises.length !== 0 && (
-        <div className="my-2 flex flex-col gap-4">
+        <div className="my-4 flex flex-col gap-4">
           {data.routines[0].workouts.map((workout) => (
             <WorkoutCard
               key={workout.workoutId}
