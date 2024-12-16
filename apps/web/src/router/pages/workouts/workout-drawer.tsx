@@ -53,4 +53,4 @@ export const WorkoutDrawer = forwardRef<
   );
 });
 
-WorkoutDrawer.displayName = "RoutineDrawer";
+WorkoutDrawer.displayName = "WorkoutDrawer";
