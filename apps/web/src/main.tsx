@@ -7,7 +7,7 @@ import { MainLayout } from "@/layouts";
 
 import Router from "@/router";
 
-import "./index.css";
+import "@/styles/index.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
