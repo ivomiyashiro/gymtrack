@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { PlusIcon } from "lucide-react";
 
-import { Routine } from "@/types";
+import { Workout } from "@/types";
 
 import {
   Button,
@@ -15,13 +15,12 @@ import {
   DrawerTrigger,
   Input,
   Label,
-  Textarea,
 } from "@/components";
 
-export const RoutineDrawer = forwardRef<
+export const WorkoutDrawer = forwardRef<
   HTMLButtonElement,
-  { routine?: Routine }
->(({ routine }, ref) => {
+  { workout?: Workout }
+>(({ workout }, ref) => {
   return (
     <Drawer>
       <DrawerTrigger ref={ref} className="flex items-center gap-2 text-primary">
@@ -31,7 +30,7 @@ export const RoutineDrawer = forwardRef<
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle className="text-muted-foreground">
-            {routine ? "Edit routine" : "Create routine"}
+            {workout ? "Edit routine" : "Create Workout"}
           </DrawerTitle>
           <DrawerDescription></DrawerDescription>
           <div className="mt-6 flex flex-col gap-4 text-left">
@@ -39,13 +38,9 @@ export const RoutineDrawer = forwardRef<
               <Label>Name</Label>
               <Input
                 type="text"
-                defaultValue={routine?.name}
-                placeholder="Ex: Hypertrophy workout"
+                defaultValue={workout?.name}
+                placeholder="Ex: Push day"
               />
-            </div>
-            <div className="flex flex-col gap-2">
-              <Label>Description</Label>
-              <Textarea defaultValue={routine?.description} className="h-28" />
             </div>
           </div>
         </DrawerHeader>
@@ -58,4 +53,4 @@ export const RoutineDrawer = forwardRef<
   );
 });
 
-RoutineDrawer.displayName = "RoutineDrawer";
+WorkoutDrawer.displayName = "RoutineDrawer";

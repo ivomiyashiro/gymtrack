@@ -7,9 +7,9 @@ import { PageLayout } from "@/layouts";
 
 import { Button, ExcerciseCard, TypographyH3, TypographyP } from "@/components";
 
-import data from "@/data/workouts.json";
+import data from "@/data/routines.json";
 
-const excercises: WorkoutExcercise[] = data.workouts[0].exercises;
+const excercises: WorkoutExcercise[] = data.routines[0].workouts[0].exercises;
 
 const WorkoutPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);

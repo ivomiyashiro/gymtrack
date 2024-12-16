@@ -3,12 +3,150 @@
     {
       "routineId": 1,
       "name": "PPL",
-      "description": "PUSH, PULL, LEGS"
+      "description": "PUSH, PULL, LEGS",
+      "workouts": [
+        {
+          "workoutId": 1,
+          "routineId": 1,
+          "name": "Push",
+          "notes": "",
+          "restBetweenSets": 120,
+          "exercises": [
+            {
+              "workoutExcerciseId": 1,
+              "name": "Bench Press",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            },
+            {
+              "workoutExcerciseId": 2,
+              "name": "Incline Bench Press",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            }
+          ]
+        },
+        {
+          "workoutId": 2,
+          "routineId": 1,
+          "name": "Pull",
+          "notes": "",
+          "restBetweenSets": 120,
+          "exercises": [
+            {
+              "workoutExcerciseId": 1,
+              "name": "Lat Pull Down",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            },
+            {
+              "workoutExcerciseId": 2,
+              "name": "Seated Cable Row",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            }
+          ]
+        },
+        {
+          "workoutId": 3,
+          "routineId": 1,
+          "name": "Legs",
+          "notes": "",
+          "restBetweenSets": 120,
+          "exercises": [
+            {
+              "workoutExcerciseId": 1,
+              "name": "Squat",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "routineId": 2,
       "name": "Full Body",
-      "description": "FULL BODY WORKOUT"
+      "description": "FULL BODY WORKOUT",
+      "workouts": [
+        {
+          "workoutId": 1,
+          "routineId": 2,
+          "name": "Push",
+          "notes": "",
+          "restBetweenSets": 120,
+          "exercises": [
+            {
+              "workoutExcerciseId": 1,
+              "name": "Bench Press",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            },
+            {
+              "workoutExcerciseId": 2,
+              "name": "Incline Bench Press",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            }
+          ]
+        },
+        {
+          "workoutId": 2,
+          "routineId": 2,
+          "name": "Pull",
+          "notes": "",
+          "restBetweenSets": 120,
+          "exercises": [
+            {
+              "workoutExcerciseId": 1,
+              "name": "Lat Pull Down",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            },
+            {
+              "workoutExcerciseId": 2,
+              "name": "Seated Cable Row",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            }
+          ]
+        },
+        {
+          "workoutId": 3,
+          "routineId": 2,
+          "name": "Legs",
+          "notes": "",
+          "restBetweenSets": 120,
+          "exercises": [
+            {
+              "workoutExcerciseId": 1,
+              "name": "Squat",
+              "personalRecord": {
+                "reps": 10,
+                "weight": 100
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

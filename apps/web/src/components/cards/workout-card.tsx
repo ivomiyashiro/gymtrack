@@ -1,26 +1,23 @@
 import { useNavigate } from "react-router";
+import { BicepsFlexedIcon } from "lucide-react";
 
 import { Workout } from "@/types";
 
 import { Card, TypographyH3, TypographyP } from "@/components";
-import { BicepsFlexedIcon } from "lucide-react";
 
 export const WorkoutCard = ({
-  routineId,
   workout,
+  onEdit,
+  onDelete,
 }: {
-  routineId: number;
   workout: Workout;
+  onDelete: (routineId: number) => void;
+  onEdit: (routine: Workout) => void;
 }) => {
   const navigate = useNavigate();
 
   const handleClick = () =>
-    navigate(`/routines/${routineId}/workouts/${workout.workoutId}`);
-
-  const handleEdit = () =>
-    navigate(`/routines/${routineId}/workouts/${workout.workoutId}/edit`);
-
-  const handleDelete = () => alert("Delete");
+    navigate(`/routines/${workout.routineId}/workouts/${workout.workoutId}`);
 
   return (
     <Card
@@ -28,8 +25,8 @@ export const WorkoutCard = ({
       allowDeleting={true}
       allowEditing={true}
       onClick={handleClick}
-      onEdit={handleEdit}
-      onDelete={handleDelete}
+      onDelete={() => onDelete(workout.workoutId)}
+      onEdit={() => onEdit(workout)}
     >
       <div>
         <TypographyH3>{workout.name}</TypographyH3>

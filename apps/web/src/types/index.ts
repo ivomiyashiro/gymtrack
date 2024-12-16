@@ -15,7 +15,8 @@ export type WorkoutExcercise = {
 };
 
 export type Workout = {
-  workoutId: string;
+  workoutId: number;
+  routineId: number;
   name: string;
   exercises: WorkoutExcercise[];
 };

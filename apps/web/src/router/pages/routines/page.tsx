@@ -10,6 +10,7 @@ import data from "@/data/routines.json";
 
 const RoutinesPage = () => {
   const { routines } = data;
+
   const openDrawerButtonRef = useRef<HTMLButtonElement>(null);
   const [selectedRoutine, setSelectedRoutine] = useState<Routine>();
 
