@@ -1,5 +1,7 @@
-import { useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import { PlusIcon } from "lucide-react";
+
+import { Set } from "@/types";
 
 import {
   Button,
@@ -18,7 +20,10 @@ import {
 type InputSetNameType = "reps" | "weight" | "rir";
 type SetValuesType = Record<InputSetNameType, number>;
 
-export const LoadSetDrawer = () => {
+export const LoadSetDrawer = forwardRef<
+  HTMLButtonElement,
+  { set?: Set; onSaved: () => void; onClose: () => void }
+>(({ set, onSaved, onClose }, ref) => {
   const DEFAULT_FOCUSED: InputSetNameType = "reps";
   const DEFAULT_SET_VALUES: SetValuesType = {
     reps: 0,
@@ -32,11 +37,22 @@ export const LoadSetDrawer = () => {
     useState<InputSetNameType>(DEFAULT_FOCUSED);
   const [setValue, setSetValue] = useState<SetValuesType>(DEFAULT_SET_VALUES);
 
+  // Fill inputs with defualt values when set is provided (when edit set)
+  useEffect(() => {
+    if (!set) return;
+
+    setSetValue({
+      reps: set.reps,
+      weight: set.weight,
+      rir: set.rir,
+    });
+  }, [DEFAULT_SET_VALUES]);
+
   const handleValueChange = (value: number, key: string) => {
     setSetValue((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleClose = () => {
+  const handleNumericKeyboardClose = () => {
     setNumericKeyboardVisible(false);
   };
 
@@ -51,13 +67,22 @@ export const LoadSetDrawer = () => {
   };
 
   const handleSave = () => {
+    onSaved();
     setSetValue(DEFAULT_SET_VALUES);
     closeButtonRef.current?.click();
   };
 
+  const handleDrawerClose = () => {
+    setNumericKeyboardVisible(false);
+    onClose();
+  };
+
   return (
-    <Drawer onClose={() => setNumericKeyboardVisible(false)}>
-      <DrawerTrigger className="fixed bottom-16 left-1/2 flex size-0 h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full bg-primary p-0">
+    <Drawer onClose={handleDrawerClose}>
+      <DrawerTrigger
+        ref={ref}
+        className="fixed bottom-16 left-1/2 flex size-0 h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full bg-primary p-0"
+      >
         <PlusIcon className="!size-12" />
       </DrawerTrigger>
       <DrawerContent>
@@ -111,11 +136,11 @@ export const LoadSetDrawer = () => {
           currentFocusInputKey={focusInput}
           isVisible={isNumericKeyboardVisible}
           className="mt-4"
-          onClose={handleClose}
+          onClose={handleNumericKeyboardClose}
           onFocusNext={handleFocusNext}
           onValueChange={handleValueChange}
         />
       </DrawerContent>
     </Drawer>
   );
-};
+});

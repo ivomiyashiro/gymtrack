@@ -4,7 +4,10 @@ import {
   ChevronRightIcon,
   GitCompareArrowsIcon,
 } from "lucide-react";
+
+import { Set } from "@/types";
 import { calculateSetAnalytics } from "@/utils";
+
 import {
   Card,
   Progress,
@@ -55,7 +58,17 @@ const AnalyticProgressBar = ({
   );
 };
 
-export const AnalyticsSetsCard = () => {
+export const AnalyticsSetsCard = ({
+  data,
+  onDelete,
+  onEdit,
+  onRepeat,
+}: {
+  data: Set[];
+  onDelete?: (setId: number) => void;
+  onEdit?: (set: Set) => void;
+  onRepeat?: (set: Set) => void;
+}) => {
   return (
     <div>
       <TypographyP className="mb-2 flex items-center gap-2 text-muted-foreground">
@@ -94,22 +107,17 @@ export const AnalyticsSetsCard = () => {
             />
           </div>
         </div>
-        <SetInfo
-          allowRepeting={true}
-          allowDeleting={true}
-          createdAt={new Date()}
-          reps={10}
-          weight={80}
-          rir={2}
-        />
-        <SetInfo
-          allowRepeting={true}
-          allowDeleting={true}
-          createdAt={new Date()}
-          reps={10}
-          weight={110}
-          rir={2}
-        />
+        {data.map((set) => (
+          <SetInfo
+            key={set.setId}
+            allowRepeting={true}
+            allowDeleting={true}
+            set={set}
+            onDelete={() => onDelete?.(set.setId)}
+            onEdit={() => onEdit?.(set)}
+            onRepeat={() => onRepeat?.(set)}
+          />
+        ))}
       </Card>
     </div>
   );

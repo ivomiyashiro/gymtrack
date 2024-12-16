@@ -3,6 +3,7 @@ export type Set = {
   reps: number;
   rir: number;
   weight: number;
+  createdAt: Date;
 };
 
 export type WorkoutExcercise = {

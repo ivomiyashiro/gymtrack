@@ -1,34 +1,34 @@
 import { useState } from "react";
 import { ChevronRightIcon, RepeatIcon, Trash2Icon } from "lucide-react";
 
-import { TypographyP } from "@/components";
+import { Set } from "@/types";
+
 import { cn } from "@/lib/utils";
-// TODO: Create a swipeable wrapper component
-// TODO: Listado de ejercicio
+
+import { TypographyP } from "@/components";
+
 export const SetInfo = ({
-  createdAt,
-  reps,
-  weight,
-  rir,
   allowDeleting,
   allowRepeting,
   children,
   className,
+  set,
   onClick,
   onRepeat,
   onDelete,
+  onEdit,
   ...props
 }: {
-  createdAt: Date;
-  reps: number;
-  weight: number;
-  rir: number;
   allowDeleting?: boolean;
   allowRepeting?: boolean;
+  set: Set;
   onClick?: () => void;
+  onEdit?: () => void;
   onDelete?: () => void;
   onRepeat?: () => void;
 } & React.HTMLAttributes<HTMLDivElement>) => {
+  const { reps, weight, rir, createdAt } = set;
+
   const [isSwiped, setIsSwiped] = useState(false);
   const [startX, setStartX] = useState(0);
 
@@ -66,6 +66,7 @@ export const SetInfo = ({
           isSwiped ? "-translate-x-[calc(100%-200px)]" : "translate-x-0",
           className,
         )}
+        onClick={() => onEdit?.()}
         {...props}
       >
         <TypographyP className="text-muted-foreground">
