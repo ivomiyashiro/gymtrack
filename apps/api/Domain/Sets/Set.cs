@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using api.Excercises;
-using api.Workouts;
+using api.Domain.Workouts;
+using api.Domain.Excercises;
 
-namespace api.Sets;
+namespace api.Domain.Sets;
+
 public class Set
 {
   public required Guid Id { get; init; }
@@ -14,6 +15,6 @@ public class Set
   public int Rir { get; set; }
   public DateTime CreatedAt { get; set; } = DateTime.Now;
   public DateTime UpdatedAt { get; set; }
-  public virtual required Excercise Excercise { get; set; }
-  public virtual required Workout Workout { get; set; }
+  public required Excercise Excercise { get; set; }
+  public required Workout Workout { get; set; }
 }

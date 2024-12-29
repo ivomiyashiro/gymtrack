@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-using api.Routines;
-using api.Workouts;
-using api.Excercises;
-using api.Sets;
+using api.Domain.Excercises;
+using api.Domain.Routines;
+using api.Domain.Sets;
+using api.Domain.Workouts;
 
 namespace API.AppDbContext;
+
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
@@ -15,6 +16,4 @@ public class AppDbContext : DbContext
     public DbSet<Workout> Workouts { get; set; }
     public DbSet<Excercise> Excercises { get; set; }
     public DbSet<Set> Sets { get; set; }
-
 }
-

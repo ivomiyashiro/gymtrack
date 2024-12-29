@@ -1,9 +1,10 @@
-using api.Sets;
+using api.Domain.Sets;
 
-namespace api.Excercises;
+namespace api.Domain.Excercises;
+
 public class Excercise
 {
   public required Guid ExcerciseId { get; init; }
   public required string Name { get; set; }
-  public virtual ICollection<Set> Sets { get; set; } = [];
+  public ICollection<Set> Sets { get; set; } = [];
 }

@@ -1,10 +1,11 @@
-using api.Workouts;
+using api.Domain.Workouts;
 
-namespace api.Routines;
+namespace api.Domain.Routines;
+
 public class Routine
 {
   public required Guid Id { get; init; }
   public required string Name { get; set; }
   public string? Description { get; set; }
-  public virtual ICollection<Workout> Workouts { get; set; } = [];
+  public ICollection<Workout> Workouts { get; set; } = [];
 }

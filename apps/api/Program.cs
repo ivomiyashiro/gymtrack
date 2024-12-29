@@ -1,11 +1,11 @@
-using API.AppDbContext;
 using Microsoft.EntityFrameworkCore;
+using API.AppDbContext;
+using api.Helpers;
+using api.Domain.Routines;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+builder.Services.AddApplicationServices();
 builder.Services.AddDbContext<AppDbContext>(optionsBuilder => 
     optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("Default"))
 );
@@ -18,7 +18,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("/test", () => "test");
+// Endpoints
+var apiGroup = app.MapGroup("/api");
+app.MapRoutineEndpoints();
 
 app.UseHttpsRedirection();
 
