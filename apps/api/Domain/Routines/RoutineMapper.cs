@@ -1,7 +1,7 @@
 using AutoMapper;
 using api.Domain.Routines.RoutinesDtos;
 
-namespace api.Domain.Routines.RoutinesMaper;
+namespace api.Domain.Routines;
 
 public class RoutineMapper
 {

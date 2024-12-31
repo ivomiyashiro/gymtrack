@@ -1,9 +1,9 @@
 using AutoMapper;
 using api.Domain.Workouts.WorkoutDtos;
 
-namespace api.Domain.Workouts.WorkoutMaper;
+namespace api.Domain.Workouts;
 
-public class WorkoutMaper
+public class WorkoutMapper
 {
     public class WorkoutProfile : Profile
     {
