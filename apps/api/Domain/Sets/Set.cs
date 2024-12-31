@@ -14,7 +14,7 @@ public class Set
   public decimal Weight { get; set; }
   public int Rir { get; set; }
   public DateTime CreatedAt { get; set; } = DateTime.Now;
-  public DateTime UpdatedAt { get; set; }
+  public DateTime UpdatedAt { get; set; } = DateTime.Now;
   public required Excercise Excercise { get; set; }
   public required Workout Workout { get; set; }
 }
