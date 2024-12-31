@@ -5,11 +5,11 @@ using api.Domain.Routines.RoutinesServices;
 
 namespace api.Domain.Routines;
 
-public static class MovieEndpoints
+public static class RoutineEndpoints
 {
     public static void MapRoutineEndpoints(this WebApplication app)
     {
-        var group = app.MapGroup("routines");
+        var group = app.MapGroup("/api/routines");
 
         group.MapPost("/", async (
             IMapper _mapper, 
@@ -20,18 +20,45 @@ public static class MovieEndpoints
             var createdRoutine = await _routineService.Create(newRoutine);
 
             return Results.Created(
-                $"/routines/{createdRoutine.Id}",
-                 createdRoutine
+                $"/api/routines/{createdRoutine.Id}",
+                createdRoutine
             );
         });
 
         group.MapGet("/", async (
-            IMapper _mapper, 
             IRoutineService _routineService
         ) => {
             var routines = await _routineService.GetAll();
 
             return Results.Ok(routines);
+        });
+
+        group.MapPut("/{id:guid}", async (
+            IMapper _mapper,
+            IRoutineService _routineService,
+            Guid id,
+            [FromBody] CreateRoutineDtoReq body
+        ) => {
+            var updatedRoutine = await _routineService.Update(new Routine {
+                Id = id,
+                Name = body.Name,
+                Description = body.Description
+            });
+
+            return updatedRoutine != null
+                ? Results.Ok(updatedRoutine)
+                : Results.NotFound();
+        });
+
+        group.MapDelete("/{id:guid}", async (
+            IRoutineService _routineService,
+            Guid id
+        ) => {
+        var deleted = await _routineService.DeleteById(id);
+
+        return deleted
+            ? Results.Ok() 
+            : Results.NotFound();
         });
     }
 }

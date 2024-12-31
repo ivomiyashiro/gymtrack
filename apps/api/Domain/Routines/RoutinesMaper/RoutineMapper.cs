@@ -9,11 +9,7 @@ public class RoutineMapper
     {
         public RoutineProfile()
         {
-            CreateMap<CreateRoutineDtoReq, Routine>()
-                .ForMember(
-                  dest => dest.Id, 
-                  opt => opt.MapFrom(_ => Guid.NewGuid())
-                );
+            CreateMap<CreateRoutineDtoReq, Routine>();
         }
     }
 }
