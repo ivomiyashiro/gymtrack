@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using API.AppDbContext;
 using api.Helpers;
 using api.Domain.Routines;
+using api.Domain.Workouts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,7 @@ if (app.Environment.IsDevelopment())
 // Endpoints
 var apiGroup = app.MapGroup("/api");
 app.MapRoutineEndpoints();
+app.MapWorkoutEndpoints();
 
 app.UseHttpsRedirection();
 

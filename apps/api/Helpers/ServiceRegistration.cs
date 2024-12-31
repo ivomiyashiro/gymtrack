@@ -1,4 +1,5 @@
 using api.Domain.Routines.RoutinesServices;
+using api.Domain.Workouts.WorkoutServices;
 
 namespace api.Helpers;
 
@@ -15,6 +16,7 @@ public static class ServiceRegistration
     private static IServiceCollection AddBusinessServices(this IServiceCollection services)
     {
         services.AddScoped<IRoutineService, RoutineServices>();
+        services.AddScoped<IWorkoutService, WorkoutService>();
         
         return services;
     }
