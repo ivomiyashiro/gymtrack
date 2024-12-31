@@ -28,7 +28,7 @@ public class WorkoutService : IWorkoutService
 
     public async Task<IEnumerable<Workout>> GetAll()
     {
-        return await _dbContext.Workouts.ToListAsync ();
+        return await _dbContext.Workouts.ToListAsync();
     }
 
     public async Task<Workout?> GetById(Guid id)
